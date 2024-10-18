@@ -1,0 +1,31 @@
+git commands
+1)mkdir (folder-name) :use to make folder
+2)git init : initialize empty git repository
+3)ls -al :to see hidden .git file
+4)touch  (file-name).txt: to create file
+4)git status : tell us history about project and red denoted untracked
+5)git add . or(name of specific file): to mark it green ie is making it tracked ,. means it will add all files in folder
+5)git commit -m:  use to send  the message and commit file
+6)vi names.txt: use edit names.txt file
+Start Vi: Open a terminal and type vi followed by the file path you want to edit. If the file doesn’t exist, Vi creates it1.
+Modes:
+Command Mode: Default mode for navigation and issuing commands. Press Esc to enter command mode.
+Insert Mode: To edit text, press i. In insert mode, you can type and navigate using arrow keys23.
+Navigation (in command mode):
+h: Move cursor left
+j: Move cursor down
+k: Move cursor up
+l: Move cursor right
+b: Go to beginning of current word
+e: Go to end of current word
+
+To save and exit Vi, follow these steps:
+
+Command Mode: If you’re not already in command mode, press Esc.
+Save: Type :w and press Enter. This writes (saves) the changes to the file.
+Exit: To exit Vi, type :q and press Enter. or ZZ(uppercase)
+If you want to save changes and exit in one step, use :wq
+7)cat names.txt :displays whatever is available in names.txt
+8)git restore --staged names.txt :to mark it red
+9)git log: to check history of commits
+10)rm -rf names.txt : use to delete names.txt
