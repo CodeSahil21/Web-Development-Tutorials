@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width">
+        <title>replit</title>
+        <link href=""style.css rel="stylesheet"type="text/css"/>
+    </head>
+    <body>
+        <script>
+         async   function getAnimalData(){
+            const response = await  fetch("https://fakerapi.it/api/v1/persons");//this will by default send get request
+             const finalData = await response.json()
+              console.log(finaldata);
+                }
+            
+        </script>
+    <button onclick="getAnimalData()">Get animal data</button>
+    </body>
+</html>
+   //here we learn how backend and front end connect using fetch api
