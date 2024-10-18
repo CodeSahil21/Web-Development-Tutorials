@@ -1,0 +1,15 @@
+1)style="color : green;// to change or apply text color
+2)background-color: aqua;"//to change  or apply background of text color
+3)border-radius: 10px; here 10px means 10 pixels // it is use create curve around border
+4)border: 2px solid black;//it use create border //here we can use solid or dotted create border according to requirement
+5)padding: 2px; use to pad some extra space between border
+6)margin : 50// put some breathing space outside div
+7)box-shadow: 2px 10px 10px black//use to shadow the box
+//first value add shadow to right and left(using -xpx format)
+//second value add shadow to down and up(using -xpx format)
+//third value add shadow to to top and bottom both
+8)font-size :100px;//use to increase font size
+9)///absolute positioning
+///float is one way but not widely used
+///we uze flexbox :"display: flex;justify-content:
+///we can write flex-left,flex-right,center,space-between
