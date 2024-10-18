@@ -1,0 +1,23 @@
+<html>
+    <script>
+        function populateDiv(){
+           const a = document.getElementById("firstnumber").value;
+           const b = document.getElementById("secondnumber").value;
+           const element = document.getElementById("final sum");
+          element.innerHTML = parseInt(a) + parseInt(b);
+           //we convert string into number using parseInt because  previous output 
+           //we got was in string ie 1 +1 = 11 after parsing we get 1+1=2
+           //we use document.getElementById("final sum") to  get internal value of input box html
+        }
+    </script>
+    <body>
+        
+       <input id="firstnumber" type="text" placeholder="First  number"></input> 
+       <br></br>
+      <input id="secondnumber"type="text" placeholder="Second number"></input> 
+       <br></br> 
+        <button onclick="populateDiv()">Calculate sum</button>
+        <br></br>
+        <div id="final sum"></div>
+    </body> 
+</html>

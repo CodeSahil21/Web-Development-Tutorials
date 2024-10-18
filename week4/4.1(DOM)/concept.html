@@ -1,0 +1,55 @@
+<html>
+       <script>
+        //raw debouncing
+        let timeout;
+        function debouncepopulateDiv(){
+            //delay the call to populate div unil i have not been call for 100 ms
+            //and i have been atleat called once
+            //if this get called gain stop the original clock and restart new clock using cleartimeout()
+            clearTimeout(timeout);
+        timeout = setTimeout(function(){
+                populateDiv2();
+            },1000)
+            
+        }
+        function populateDiv(){
+            /*
+            debouncing ,throtlling
+            1)debouncing : When an event (such as a button click) occurs, the debouncing mechanism ensures that the associated function is executed only after a specified delay.
+            During this delay, if the event occurs again, the timer resets. This prevents unnecessary or unintended function calls due to rapid, repeated events.
+            For example, consider a search input field where you want to trigger an API call after the user stops typing. 
+            By debouncing the input event, you can ensure that the API call is made only once, even if the user types quickly.
+            */
+           const a = document.getElementById("firstnumber").value;
+           const b = document.getElementById("secondnumber").value;
+           const element = document.getElementById("final sum");
+        //fetch:connect backend and frontend
+        fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b)
+        .then(function(response){
+            response.text()
+            .then(function(ans){
+                document.getElementById("finalsum").innerHTML = ans;
+            });
+        });
+    }
+           //we convert string into number using parseInt because  previous output 
+           //we got was in string ie 1 +1 = 11 after parsing we get 1+1=2
+           //we use document.getElementById("final sum") to  get internal value of input box html
+           async function populateDiv2(){
+            const a = document.getElementById("firstnumber").value;
+            const b = document.getElementById("secondnumber").value;
+            const response = await fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b);
+            const ans = await response.text();
+            document.getElementById("finalsum").innerHTML = ans;
+           }
+        
+    </script>
+    <body>
+        
+       <input onclick="debouncepopulateDiv()" id="firstnumber" type="text" placeholder="First  number"></input> 
+       <br></br>
+      <input onclick="debouncepopulateDiv()" id="secondnumber"type="text" placeholder="Second number"></input> 
+        <br></br> 
+        <div id="finalsum"></div>
+    </body> 
+</html>

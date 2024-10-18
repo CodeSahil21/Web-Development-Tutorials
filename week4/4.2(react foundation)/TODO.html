@@ -1,0 +1,24 @@
+<html>
+    <script>
+        function addTodo(){
+const title = document.getElementById("title").value;
+const description = document.getElementById("description").value;
+//document.createElement :use to create dom elements in memory and eventually put in Dom like div
+    const childDiv = document.createElement("div");//<div></div>
+    childDiv.innerHTML = title;
+    document.getElementById("container").appendChild(childDiv);
+       
+        }
+    </script>
+    <div>
+        <input id="title" type="text"placeholder="title"></input>
+        <br></br>
+        <input id="description"  type="text"placeholder="descrpition"></input>
+        <br></br>
+        <button onclick="addTodo()">Add todo</button>
+        <div id="container">
+      
+        </div>
+        
+    </div>
+ </html>
